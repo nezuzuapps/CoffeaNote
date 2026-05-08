@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — CffeaNote</title>
+  <meta name="description" content="Privacy Policy for CffeaNote (GDPR / CCPA / APPI compliant).">
+  <style>
+    :root {
+      --cream: #FAF6F0;
+      --cream-dark: #F0E8DC;
+      --brown-light: #C49A72;
+      --brown: #8B6244;
+      --brown-dark: #5C3D22;
+      --text: #2C1A0E;
+      --text-muted: #7A6555;
+      --white: #FFFFFF;
+      --shadow: rgba(92, 61, 34, 0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.75;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250, 246, 240, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--cream-dark);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo {
+      font-size: 1.25rem; font-weight: 700; color: var(--brown-dark);
+      letter-spacing: -0.02em; text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 1.6rem; align-items: center; }
+    .nav-links a {
+      color: var(--text-muted); text-decoration: none; font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--brown-dark); }
+    .lang-switch {
+      border: 1px solid var(--cream-dark);
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.78rem !important;
+      font-weight: 600;
+    }
+    .lang-switch:hover { background: var(--cream-dark); }
+
+    .page-header {
+      background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown) 100%);
+      color: var(--white);
+      padding: 4rem 5%;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.6rem;
+    }
+    .page-header p { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
+
+    .content {
+      max-width: 760px;
+      margin: 3rem auto;
+      padding: 0 5% 5rem;
+    }
+    .meta-row {
+      display: flex; flex-wrap: wrap; gap: 0.6rem;
+      margin-bottom: 2rem;
+    }
+    .meta-tag {
+      font-size: 0.78rem; color: var(--text-muted);
+      padding: 0.4rem 0.9rem;
+      background: var(--cream-dark); border-radius: 999px;
+    }
+    .meta-tag strong { color: var(--brown-dark); }
+    h2 {
+      font-size: 1.18rem; font-weight: 700;
+      color: var(--brown-dark); margin: 2.5rem 0 0.8rem;
+      padding-left: 1rem;
+      border-left: 4px solid var(--brown-light);
+    }
+    h3 {
+      font-size: 1rem; font-weight: 700;
+      color: var(--brown); margin: 1.6rem 0 0.6rem;
+    }
+    p { font-size: 0.95rem; color: var(--text); margin-bottom: 1rem; }
+    ul {
+      margin: 0.4rem 0 1rem 1.5rem;
+      font-size: 0.95rem; color: var(--text);
+    }
+    li { margin-bottom: 0.4rem; }
+    .highlight-box {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 1.6rem 1.8rem;
+      box-shadow: 0 4px 20px var(--shadow);
+      margin: 2rem 0;
+    }
+    .highlight-box p:last-child { margin-bottom: 0; }
+    .toc {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 1.4rem 1.8rem;
+      box-shadow: 0 4px 16px var(--shadow);
+      margin: 2.5rem 0;
+    }
+    .toc-title {
+      font-size: 0.78rem; font-weight: 700;
+      color: var(--brown-light);
+      letter-spacing: 0.1em; text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+    .toc ol {
+      margin-left: 1.4rem;
+      font-size: 0.88rem;
+      column-count: 2;
+      column-gap: 1.6rem;
+    }
+    .toc li { margin-bottom: 0.3rem; break-inside: avoid; }
+    .toc a { color: var(--brown-dark); text-decoration: none; }
+    .toc a:hover { color: var(--brown-light); text-decoration: underline; }
+    a { color: var(--brown); text-decoration: underline; }
+    a:hover { color: var(--brown-dark); }
+
+    footer {
+      background: var(--brown-dark);
+      color: rgba(255,255,255,0.7);
+      padding: 3rem 5%;
+      text-align: center;
+    }
+    footer a { color: rgba(255,255,255,0.85); text-decoration: none; margin: 0 0.8rem; }
+    footer a:hover { color: #fff; }
+    .footer-links { margin-bottom: 1.2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.2rem; }
+    .footer-copy { font-size: 0.82rem; }
+
+    @media (max-width: 600px) {
+      .toc ol { column-count: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">☕ CffeaNote</a>
+  <div class="nav-links">
+    <a href="privacy_en.html">Privacy Policy</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html" class="lang-switch">JP</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>Privacy Policy</h1>
+  <p>CffeaNote</p>
+</div>
+
+<div class="content">
+  <div class="meta-row">
+    <span class="meta-tag"><strong>Last Updated:</strong> April 29, 2026</span>
+    <span class="meta-tag"><strong>Effective Date:</strong> April 29, 2026</span>
+    <span class="meta-tag"><strong>Version:</strong> 2.0</span>
+  </div>
+
+  <div class="highlight-box">
+    <p>CffeaNote (the "App") is designed with your privacy as the highest priority. The App collects only the minimum amount of personal information and never sells your data or uses it for advertising purposes.</p>
+    <p>This Privacy Policy is prepared in compliance with the EU General Data Protection Regulation (GDPR), the UK GDPR, the California Consumer Privacy Act (CCPA / CPRA), Japan's Act on the Protection of Personal Information (APPI), and applicable data protection laws of other jurisdictions.</p>
+    <p><strong>Note:</strong> In case of any discrepancy between this English version and the Japanese original, the Japanese version shall prevail.</p>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">Table of Contents</div>
+    <ol>
+      <li><a href="#sec1">Data Controller</a></li>
+      <li><a href="#sec2">Information We Collect</a></li>
+      <li><a href="#sec3">Purposes of Use</a></li>
+      <li><a href="#sec4">Legal Basis (GDPR)</a></li>
+      <li><a href="#sec5">Where Data Is Stored</a></li>
+      <li><a href="#sec6">International Data Transfers</a></li>
+      <li><a href="#sec7">Sharing with Third Parties</a></li>
+      <li><a href="#sec8">Data Retention</a></li>
+      <li><a href="#sec9">Your Rights</a></li>
+      <li><a href="#sec10">Right to Lodge a Complaint (EU/EEA)</a></li>
+      <li><a href="#sec11">California Residents (CCPA / CPRA)</a></li>
+      <li><a href="#sec12">Japan (APPI)</a></li>
+      <li><a href="#sec13">Security Measures</a></li>
+      <li><a href="#sec14">Advertising, Analytics &amp; Tracking</a></li>
+      <li><a href="#sec15">Children's Privacy</a></li>
+      <li><a href="#sec16">Cookies</a></li>
+      <li><a href="#sec17">Changes to this Policy</a></li>
+      <li><a href="#sec18">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <h2 id="sec1">1. Data Controller</h2>
+  <ul>
+    <li><strong>Operator:</strong> nezuzuapps (independent developer)</li>
+    <li><strong>Contact email:</strong> <a href="mailto:nezuzuapps+support@gmail.com">nezuzuapps+support@gmail.com</a></li>
+    <li><strong>Country:</strong> Japan</li>
+  </ul>
+  <p>The App is operated by an independent developer. We have not appointed an EU representative under GDPR Article 27, as the scale of our data processing falls below the threshold requiring such an appointment. Users in the EU/EEA may contact us directly via the email address above.</p>
+
+  <h2 id="sec2">2. Information We Collect</h2>
+
+  <h3>2.1 Information processed within the App</h3>
+  <p>The following content, entered by users, is stored on the user's device and (if signed in to iCloud) in the user's own iCloud account:</p>
+  <ul>
+    <li>Coffee brewing recipes (dripper, dose, water amount, steps, etc.)</li>
+    <li>Coffee bean information (origin, farm, processing method, roast level, etc.)</li>
+    <li>Tasting scores and notes</li>
+  </ul>
+  <p>The App does <strong>not</strong> collect your name, email address, location, device identifiers, usage analytics, or advertising IDs.</p>
+
+  <h3>2.2 Information from email inquiries</h3>
+  <p>When you contact us via email, we receive the following:</p>
+  <ul>
+    <li>Your email address</li>
+    <li>Your name (if voluntarily provided)</li>
+    <li>The content of your message</li>
+  </ul>
+  <p>This website does not use any contact forms, analytics tools, or third-party scripts. All inquiries are sent directly from your own email client.</p>
+
+  <h2 id="sec3">3. Purposes of Use</h2>
+  <ul>
+    <li>To provide the App's features (recipe management, iCloud sync, etc.)</li>
+    <li>To respond to inquiries and provide support</li>
+    <li>To investigate and fix bugs</li>
+    <li>To comply with legal obligations</li>
+  </ul>
+
+  <h2 id="sec4">4. Legal Basis for Processing (GDPR / EU/EEA Users)</h2>
+  <p>For users in the EU/EEA, we process personal data on the following legal bases (GDPR Article 6(1)):</p>
+  <ul>
+    <li><strong>Performance of a contract (Art. 6(1)(b)):</strong> processing necessary to provide the App's functionality.</li>
+    <li><strong>Legitimate interests (Art. 6(1)(f)):</strong> responding to inquiries, fixing bugs, and ensuring service safety.</li>
+    <li><strong>Legal obligation (Art. 6(1)(c)):</strong> responding to lawful requests from authorities.</li>
+  </ul>
+
+  <h2 id="sec5">5. Where Data Is Stored</h2>
+  <ul>
+    <li><strong>On-device:</strong> Stored locally with SwiftData and protected by iOS file encryption.</li>
+    <li><strong>iCloud (Apple CloudKit):</strong> If you are signed in to iCloud, data is synced and backed up via your own iCloud account. Apple operates data centers in multiple countries. See the <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a> for details.</li>
+    <li><strong>Inquiry emails:</strong> Stored on the email service providers' servers used to send and receive messages.</li>
+  </ul>
+
+  <h2 id="sec6">6. International Data Transfers</h2>
+  <p>Personal data of users in the EU/EEA or the UK may be transferred to Japan, the United States, or other countries through iCloud sync or email correspondence with the developer.</p>
+  <ul>
+    <li>For Apple iCloud / CloudKit transfers, Apple has implemented appropriate safeguards including the EU Standard Contractual Clauses (SCCs).</li>
+    <li>Japan has been recognized by the European Commission as providing an adequate level of data protection (Adequacy Decision), so no additional safeguards are required for transfers to Japan.</li>
+  </ul>
+
+  <h2 id="sec7">7. Sharing with Third Parties</h2>
+  <p>We do <strong>not</strong> sell or share personal data with third parties. We do not provide data to advertising networks, analytics providers, or data brokers.</p>
+  <p>Apple iCloud / CloudKit serves as infrastructure to store the user's own data in the user's own iCloud account; the developer cannot view that data.</p>
+
+  <h2 id="sec8">8. Data Retention</h2>
+  <ul>
+    <li><strong>In-App data:</strong> Retained until you delete it or uninstall the App.</li>
+    <li><strong>iCloud data:</strong> Retained until you delete it from the iCloud Storage settings on iOS.</li>
+    <li><strong>Inquiry emails:</strong> Generally deleted within one year after the inquiry has been resolved, except where retention is required by law.</li>
+  </ul>
+
+  <h2 id="sec9">9. Your Rights</h2>
+  <p>Subject to applicable law, you have the following rights:</p>
+  <ul>
+    <li><strong>Right of access</strong> — request a copy of the personal data we hold about you</li>
+    <li><strong>Right to rectification</strong> — request correction of inaccurate data</li>
+    <li><strong>Right to erasure ("right to be forgotten")</strong></li>
+    <li><strong>Right to restriction of processing</strong></li>
+    <li><strong>Right to data portability</strong> — receive your data in a machine-readable format</li>
+    <li><strong>Right to object</strong> to processing</li>
+    <li><strong>Right to withdraw consent</strong> at any time, where processing is based on consent</li>
+  </ul>
+  <p>Because the App is designed so that you control your own data, most of these rights can be exercised directly within the App and iOS Settings. For other requests, please contact us via the <a href="contact.html">Contact page</a>. We will respond within 30 days (or within one month, extendable up to three months, where GDPR applies). No fee is charged for exercising your rights, except for manifestly unfounded or excessive requests.</p>
+
+  <h2 id="sec10">10. Right to Lodge a Complaint (EU/EEA Users)</h2>
+  <p>If you are located in the EU/EEA and have concerns about how we handle your personal data, you have the right to lodge a complaint with the Data Protection Authority (DPA) in your country. A list of DPAs is available on the <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank" rel="noopener">European Data Protection Board members page</a>.</p>
+
+  <h2 id="sec11">11. California Residents (CCPA / CPRA)</h2>
+  <p>California residents have the following rights under the CCPA / CPRA:</p>
+  <ul>
+    <li>The right to <strong>know</strong> what personal information is collected and how it is used</li>
+    <li>The right to request <strong>deletion</strong> of personal information</li>
+    <li>The right to request <strong>correction</strong> of inaccurate personal information</li>
+    <li>The right to <strong>opt out</strong> of the sale or sharing of personal information</li>
+    <li>The right to <strong>non-discrimination</strong> for exercising these rights</li>
+  </ul>
+  <p><strong>Do Not Sell or Share My Personal Information:</strong> We do not sell or share your personal information. We do not share data for cross-context behavioral advertising.</p>
+  <p>Under the CCPA, the categories of personal information we collect are limited to "<em>identifiers (email)</em>" and "<em>commercial information (inquiry content)</em>". We have not sold or shared this information in the preceding 12 months.</p>
+
+  <h2 id="sec12">12. Japan (APPI)</h2>
+  <ul>
+    <li><strong>Personal Information Handler:</strong> nezuzuapps (independent developer)</li>
+    <li><strong>Complaints:</strong> Use the contact information at the end of this policy.</li>
+    <li><strong>Disclosure / correction / deletion requests:</strong> Submit requests by email to the address below. We will respond within a reasonable period after verifying your identity.</li>
+    <li><strong>Authorized Personal Information Protection Organization:</strong> We are not a member of any such organization.</li>
+  </ul>
+
+  <h2 id="sec13">13. Security Measures</h2>
+  <p>We protect user data using the iOS security features (App Sandbox, file encryption) and Apple iCloud security features (encryption in transit and at rest). The developer has no means of accessing your in-App data directly.</p>
+  <p>This website is served over HTTPS via GitHub Pages.</p>
+
+  <h2 id="sec14">14. Advertising, Analytics &amp; Tracking</h2>
+  <ul>
+    <li>The App does not display advertisements.</li>
+    <li>We do not use third-party analytics tools such as Google Analytics, Firebase Analytics, or Crashlytics.</li>
+    <li>We do not perform cross-app tracking subject to Apple's App Tracking Transparency (ATT) framework.</li>
+    <li>This website uses no cookies, tracking technologies, or third-party scripts.</li>
+  </ul>
+
+  <h2 id="sec15">15. Children's Privacy</h2>
+  <p>The App is not intended for children under the age of 13 (or up to 16 in certain EU/EEA Member States). We do not knowingly collect personal information from individuals in this age group. If we receive such information by mistake, we will promptly delete it after verification.</p>
+
+  <h2 id="sec16">16. Cookies</h2>
+  <p>This website does not use cookies or any similar tracking technologies (local storage, web beacons, fingerprinting, etc.).</p>
+
+  <h2 id="sec17">17. Changes to this Policy</h2>
+  <p>We may update this Privacy Policy in response to changes in laws, App functionality, or our operations. When we make material changes, we will update the "Last Updated" date at the top of this page and notify users in the App's release notes.</p>
+
+  <h2 id="sec18">18. Contact Us</h2>
+  <p>If you have questions about this Privacy Policy, would like to exercise your rights, or have any feedback, please contact us:</p>
+  <ul>
+    <li><strong>Email:</strong> <a href="mailto:nezuzuapps+support@gmail.com">nezuzuapps+support@gmail.com</a></li>
+    <li><strong>Contact page:</strong> <a href="contact.html">contact.html</a></li>
+  </ul>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="privacy_en.html">Privacy Policy</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">日本語</a>
+  </div>
+  <p class="footer-copy">© 2026 nezuzuapps. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

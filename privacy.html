@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー — CffeaNote</title>
+  <meta name="description" content="CffeaNote のプライバシーポリシー（GDPR / CCPA / 個人情報保護法対応）">
+  <style>
+    :root {
+      --cream: #FAF6F0;
+      --cream-dark: #F0E8DC;
+      --brown-light: #C49A72;
+      --brown: #8B6244;
+      --brown-dark: #5C3D22;
+      --text: #2C1A0E;
+      --text-muted: #7A6555;
+      --white: #FFFFFF;
+      --shadow: rgba(92, 61, 34, 0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.85;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250, 246, 240, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--cream-dark);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo {
+      font-size: 1.25rem; font-weight: 700; color: var(--brown-dark);
+      letter-spacing: -0.02em; text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 1.6rem; align-items: center; }
+    .nav-links a {
+      color: var(--text-muted); text-decoration: none; font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--brown-dark); }
+    .lang-switch {
+      border: 1px solid var(--cream-dark);
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.78rem !important;
+      font-weight: 600;
+    }
+    .lang-switch:hover { background: var(--cream-dark); }
+
+    .page-header {
+      background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown) 100%);
+      color: var(--white);
+      padding: 4rem 5%;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.6rem;
+    }
+    .page-header p { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
+
+    .content {
+      max-width: 760px;
+      margin: 3rem auto;
+      padding: 0 5% 5rem;
+    }
+    .meta-row {
+      display: flex; flex-wrap: wrap; gap: 0.6rem;
+      margin-bottom: 2rem;
+    }
+    .meta-tag {
+      font-size: 0.78rem; color: var(--text-muted);
+      padding: 0.4rem 0.9rem;
+      background: var(--cream-dark); border-radius: 999px;
+    }
+    .meta-tag strong { color: var(--brown-dark); }
+    h2 {
+      font-size: 1.18rem; font-weight: 700;
+      color: var(--brown-dark); margin: 2.5rem 0 0.8rem;
+      padding-left: 1rem;
+      border-left: 4px solid var(--brown-light);
+    }
+    h3 {
+      font-size: 1rem; font-weight: 700;
+      color: var(--brown); margin: 1.6rem 0 0.6rem;
+    }
+    p { font-size: 0.95rem; color: var(--text); margin-bottom: 1rem; }
+    ul {
+      margin: 0.4rem 0 1rem 1.5rem;
+      font-size: 0.95rem; color: var(--text);
+    }
+    li { margin-bottom: 0.4rem; }
+    .highlight-box {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 1.6rem 1.8rem;
+      box-shadow: 0 4px 20px var(--shadow);
+      margin: 2rem 0;
+    }
+    .highlight-box p:last-child { margin-bottom: 0; }
+    .toc {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 1.4rem 1.8rem;
+      box-shadow: 0 4px 16px var(--shadow);
+      margin: 2.5rem 0;
+    }
+    .toc-title {
+      font-size: 0.78rem; font-weight: 700;
+      color: var(--brown-light);
+      letter-spacing: 0.1em; text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+    .toc ol {
+      margin-left: 1.4rem;
+      font-size: 0.88rem;
+      column-count: 2;
+      column-gap: 1.6rem;
+    }
+    .toc li { margin-bottom: 0.3rem; break-inside: avoid; }
+    .toc a { color: var(--brown-dark); text-decoration: none; }
+    .toc a:hover { color: var(--brown-light); text-decoration: underline; }
+    a { color: var(--brown); text-decoration: underline; }
+    a:hover { color: var(--brown-dark); }
+
+    footer {
+      background: var(--brown-dark);
+      color: rgba(255,255,255,0.7);
+      padding: 3rem 5%;
+      text-align: center;
+    }
+    footer a { color: rgba(255,255,255,0.85); text-decoration: none; margin: 0 0.8rem; }
+    footer a:hover { color: #fff; }
+    .footer-links { margin-bottom: 1.2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.2rem; }
+    .footer-copy { font-size: 0.82rem; }
+
+    @media (max-width: 600px) {
+      .toc ol { column-count: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">☕ CffeaNote</a>
+  <div class="nav-links">
+    <a href="privacy.html">プライバシーポリシー</a>
+    <a href="contact.html">お問い合わせ</a>
+    <a href="privacy_en.html" class="lang-switch">EN</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>プライバシーポリシー</h1>
+  <p>Privacy Policy</p>
+</div>
+
+<div class="content">
+  <div class="meta-row">
+    <span class="meta-tag"><strong>最終更新日：</strong>2026年4月29日</span>
+    <span class="meta-tag"><strong>効力発生日：</strong>2026年4月29日</span>
+    <span class="meta-tag"><strong>バージョン：</strong>2.0</span>
+  </div>
+
+  <div class="highlight-box">
+    <p>CffeaNote（以下「本アプリ」）は、ユーザーのプライバシーを最優先に設計されています。本アプリは個人情報の収集を最小限に抑え、第三者への販売・広告利用は一切行いません。</p>
+    <p>本ポリシーは、EU 一般データ保護規則（GDPR）、米国カリフォルニア州消費者プライバシー法（CCPA / CPRA）、日本の個人情報の保護に関する法律（APPI）など、各国・地域の法令に基づいて作成されています。</p>
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">目次</div>
+    <ol>
+      <li><a href="#sec1">事業者情報</a></li>
+      <li><a href="#sec2">収集する情報</a></li>
+      <li><a href="#sec3">利用目的</a></li>
+      <li><a href="#sec4">処理の法的根拠</a></li>
+      <li><a href="#sec5">データの保存場所</a></li>
+      <li><a href="#sec6">国際データ転送</a></li>
+      <li><a href="#sec7">第三者への提供</a></li>
+      <li><a href="#sec8">データの保持期間</a></li>
+      <li><a href="#sec9">ユーザーの権利</a></li>
+      <li><a href="#sec10">EU 監督機関への申立</a></li>
+      <li><a href="#sec11">カリフォルニア住民の権利</a></li>
+      <li><a href="#sec12">日本国内の事項</a></li>
+      <li><a href="#sec13">安全管理措置</a></li>
+      <li><a href="#sec14">広告・解析・トラッキング</a></li>
+      <li><a href="#sec15">未成年者</a></li>
+      <li><a href="#sec16">Cookie</a></li>
+      <li><a href="#sec17">ポリシーの変更</a></li>
+      <li><a href="#sec18">お問い合わせ</a></li>
+    </ol>
+  </div>
+
+  <h2 id="sec1">1. 事業者情報（データ管理者）</h2>
+  <ul>
+    <li><strong>事業者名：</strong>nezuzuapps（個人開発者）</li>
+    <li><strong>連絡先メール：</strong><a href="mailto:nezuzuapps+support@gmail.com">nezuzuapps+support@gmail.com</a></li>
+    <li><strong>所在国：</strong>日本</li>
+  </ul>
+  <p>本アプリは個人開発者によって提供されています。GDPR 第27条に基づく EU 内代理人は、本アプリのデータ処理規模が代理人指定義務の閾値に該当しないため指定していません。EU・EEA 圏のユーザーは上記メールアドレスから直接ご連絡いただけます。</p>
+
+  <h2 id="sec2">2. 収集する情報</h2>
+
+  <h3>2.1 本アプリ内で扱う情報</h3>
+  <p>ユーザーが本アプリに入力する以下のコンテンツは、ユーザーの端末および（iCloud にサインインしている場合は）ユーザー自身の iCloud アカウントに保存されます。</p>
+  <ul>
+    <li>コーヒー抽出レシピ（ドリッパー、粉量、湯量、ステップ等）</li>
+    <li>コーヒー豆の情報（産地、農園名、精製方法、焙煎度等）</li>
+    <li>抽出時の評価スコア・テイスティングノート</li>
+  </ul>
+  <p>本アプリは <strong>氏名、メールアドレス、位置情報、端末識別子、利用解析データ、広告 ID</strong> を一切収集しません。</p>
+
+  <h3>2.2 お問い合わせ時の情報</h3>
+  <p>ユーザーがメールでお問い合わせいただく際、メールに含まれる以下の情報を受信します。</p>
+  <ul>
+    <li>メールアドレス</li>
+    <li>お名前（任意でご記入いただいた場合）</li>
+    <li>お問い合わせ本文</li>
+  </ul>
+  <p>本ウェブサイトはお問い合わせフォーム、解析ツール、第三者スクリプトを一切使用していません。連絡はすべてユーザー自身のメールアプリから直接送信されます。</p>
+
+  <h2 id="sec3">3. 利用目的</h2>
+  <ul>
+    <li>本アプリの機能（レシピ管理・iCloud 同期等）の提供</li>
+    <li>お問い合わせへの返信・サポート対応</li>
+    <li>不具合の調査および修正</li>
+    <li>法的義務の履行</li>
+  </ul>
+
+  <h2 id="sec4">4. 処理の法的根拠（GDPR / EU・EEA 圏ユーザー向け）</h2>
+  <p>EU・EEA 圏のユーザーに対する個人データの処理は、以下の法的根拠に基づきます（GDPR 第6条第1項）。</p>
+  <ul>
+    <li><strong>契約の履行（b 号）：</strong>本アプリ機能の提供のために必要な処理</li>
+    <li><strong>正当な利益（f 号）：</strong>お問い合わせへの返信、不具合対応、サービスの安全性確保</li>
+    <li><strong>法的義務（c 号）：</strong>法令に基づく開示請求等への対応</li>
+  </ul>
+
+  <h2 id="sec5">5. データの保存場所</h2>
+  <ul>
+    <li><strong>端末内：</strong>SwiftData によりデバイスのローカルストレージに暗号化されて保存されます。</li>
+    <li><strong>iCloud（Apple CloudKit）：</strong>ユーザーが iCloud にサインインしている場合、ユーザー自身の iCloud アカウントを通じて同期・バックアップされます。Apple のデータセンターは複数の国・地域に所在します。詳細は <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple のプライバシーポリシー</a> をご確認ください。</li>
+    <li><strong>お問い合わせメール：</strong>送受信メールはメール提供事業者のサーバーに保管されます。</li>
+  </ul>
+
+  <h2 id="sec6">6. 国際データ転送</h2>
+  <p>EU・EEA 圏や英国のユーザーのデータは、iCloud 同期や開発者への返信メールを通じて、日本、米国、その他の国に転送される可能性があります。</p>
+  <ul>
+    <li>Apple iCloud / CloudKit のデータ転送には、Apple が EU 標準契約条項（SCCs）を含む適切な保護措置を講じています。</li>
+    <li>日本は EU により十分性認定（Adequacy Decision）を受けており、日本への個人データの移転には追加の保護措置は必要ありません。</li>
+  </ul>
+
+  <h2 id="sec7">7. 第三者への提供</h2>
+  <p>本アプリは個人データを第三者に <strong>販売・提供しません</strong>。広告ネットワーク、分析事業者、データブローカーへの提供も一切行いません。</p>
+  <p>Apple iCloud / CloudKit はユーザー自身のデータをユーザー自身の iCloud アカウントに保管するための基盤であり、開発者がそのデータを閲覧することはできません。</p>
+
+  <h2 id="sec8">8. データの保持期間</h2>
+  <ul>
+    <li><strong>アプリ内データ：</strong>ユーザーが削除またはアプリをアンインストールするまで保存されます。</li>
+    <li><strong>iCloud データ：</strong>ユーザーが iOS 設定の iCloud ストレージ管理画面から削除するまで保存されます。</li>
+    <li><strong>お問い合わせメール：</strong>原則として返信完了後 1 年以内に削除します（法令により保管が求められる場合を除く）。</li>
+  </ul>
+
+  <h2 id="sec9">9. ユーザーの権利</h2>
+  <p>ユーザーは適用される法令に基づき、以下の権利を行使できます。</p>
+  <ul>
+    <li><strong>アクセス権：</strong>当方が保有するデータの開示請求</li>
+    <li><strong>訂正権：</strong>不正確なデータの訂正請求</li>
+    <li><strong>削除権（忘れられる権利）：</strong>データの削除請求</li>
+    <li><strong>処理制限権：</strong>処理の制限請求</li>
+    <li><strong>データポータビリティ権：</strong>機械可読形式でデータを受け取る権利</li>
+    <li><strong>異議申立権：</strong>処理への異議申立</li>
+    <li><strong>同意撤回権：</strong>同意に基づく処理について、いつでも同意を撤回する権利</li>
+  </ul>
+  <p>本アプリのデータはユーザー自身が管理する仕組みのため、ほとんどの権利はアプリ内および iOS 設定から直接行使できます。それ以外の請求は <a href="contact.html">お問い合わせページ</a> より承ります。原則として 30 日以内（GDPR 適用時は 1 ヶ月以内、最大 3 ヶ月まで延長可）に対応します。権利行使に関して費用は請求しません（明らかに不当な反復請求を除く）。</p>
+
+  <h2 id="sec10">10. EU・EEA 圏監督機関への苦情申立権</h2>
+  <p>EU・EEA 圏のユーザーは、本ポリシーや当方のデータ取り扱いに不満がある場合、お住まいの国の監督機関（DPA：Data Protection Authority）に苦情を申し立てる権利があります。各国の監督機関の連絡先は <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank" rel="noopener">European Data Protection Board の一覧ページ</a> をご参照ください。</p>
+
+  <h2 id="sec11">11. カリフォルニア州住民の権利（CCPA / CPRA）</h2>
+  <p>カリフォルニア州住民は、CCPA / CPRA に基づき以下の権利を有します。</p>
+  <ul>
+    <li>収集された個人情報のカテゴリ・利用目的を <strong>知る権利</strong></li>
+    <li>個人情報の <strong>削除を求める権利</strong></li>
+    <li>不正確な個人情報の <strong>訂正を求める権利</strong></li>
+    <li>個人情報の販売・共有を <strong>停止する権利（オプトアウト）</strong></li>
+    <li>権利行使による <strong>差別を受けない権利</strong></li>
+  </ul>
+  <p><strong>個人情報の販売・共有について（Do Not Sell or Share My Personal Information）：</strong>本アプリはユーザーの個人情報を販売または共有していません。ターゲティング広告のためのデータ共有も行っていません。</p>
+  <p>収集する個人情報のカテゴリは、CCPA の定義に基づき「<em>識別子（メール）</em>」「<em>商業情報（お問い合わせ内容）</em>」のみです。これらの情報は過去 12 ヶ月以内において販売・共有されていません。</p>
+
+  <h2 id="sec12">12. 日本の個人情報保護法（APPI）に基づく事項</h2>
+  <ul>
+    <li><strong>個人情報取扱事業者：</strong>nezuzuapps（個人開発者）</li>
+    <li><strong>苦情の申出先：</strong>本ポリシー末尾の連絡先</li>
+    <li><strong>開示等の請求：</strong>本ポリシー末尾の連絡先までメールでご請求ください。本人確認の上、合理的な期間内に対応します。</li>
+    <li><strong>認定個人情報保護団体：</strong>所属していません。</li>
+  </ul>
+
+  <h2 id="sec13">13. 安全管理措置</h2>
+  <p>本アプリは、ユーザーデータを iOS のセキュリティ機能（App Sandbox、ファイル暗号化）および Apple iCloud のセキュリティ機能（保存時・転送時の暗号化）のもとで保管します。開発者個人がアプリ内データに直接アクセスする手段はありません。</p>
+  <p>ウェブサイトは GitHub Pages 経由で HTTPS 通信により提供されます。</p>
+
+  <h2 id="sec14">14. 広告・アナリティクス・トラッキング</h2>
+  <ul>
+    <li>本アプリは広告を表示しません。</li>
+    <li>Google Analytics、Firebase Analytics、Crashlytics などの第三者解析ツールを使用していません。</li>
+    <li>App Tracking Transparency（ATT）対象のクロスアプリ・トラッキングは行いません。</li>
+    <li>本ウェブサイトは Cookie・トラッキング技術・第三者スクリプトを一切使用していません。</li>
+  </ul>
+
+  <h2 id="sec15">15. 未成年者のプライバシー</h2>
+  <p>本アプリは 13 歳未満（EU・EEA 圏では加盟国により最大 16 歳未満）の子どもを対象としておらず、意図的にこの年齢層から個人情報を収集することはありません。万一そのような情報を受領した場合、確認の上、速やかに削除します。</p>
+
+  <h2 id="sec16">16. Cookie</h2>
+  <p>本ウェブサイトは Cookie やそれに類する追跡技術（ローカルストレージ、ウェブビーコン、フィンガープリント等）を一切使用していません。</p>
+
+  <h2 id="sec17">17. ポリシーの変更</h2>
+  <p>本ポリシーは法令の改正、本アプリの機能追加・変更、運用の見直しに応じて更新されることがあります。重要な変更があった場合は、本ページの「最終更新日」を更新するとともに、アプリのアップデート情報等で告知します。</p>
+
+  <h2 id="sec18">18. お問い合わせ</h2>
+  <p>本プライバシーポリシーに関するご質問、権利行使請求、その他のご意見は以下よりご連絡ください。</p>
+  <ul>
+    <li><strong>メール：</strong><a href="mailto:nezuzuapps+support@gmail.com">nezuzuapps+support@gmail.com</a></li>
+    <li><strong>お問い合わせページ：</strong><a href="contact.html">contact.html</a></li>
+  </ul>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">ホーム</a>
+    <a href="privacy.html">プライバシーポリシー</a>
+    <a href="contact.html">お問い合わせ</a>
+    <a href="privacy_en.html">English</a>
+  </div>
+  <p class="footer-copy">© 2026 nezuzuapps. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

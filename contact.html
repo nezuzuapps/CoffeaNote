@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ — CffeaNote</title>
+  <meta name="description" content="CffeaNote へのお問い合わせページです。">
+  <style>
+    :root {
+      --cream: #FAF6F0;
+      --cream-dark: #F0E8DC;
+      --brown-light: #C49A72;
+      --brown: #8B6244;
+      --brown-dark: #5C3D22;
+      --text: #2C1A0E;
+      --text-muted: #7A6555;
+      --white: #FFFFFF;
+      --shadow: rgba(92, 61, 34, 0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250, 246, 240, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--cream-dark);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-logo {
+      font-size: 1.25rem; font-weight: 700; color: var(--brown-dark);
+      letter-spacing: -0.02em; text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a {
+      color: var(--text-muted); text-decoration: none; font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--brown-dark); }
+
+    .page-header {
+      background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown) 100%);
+      color: var(--white);
+      padding: 4rem 5%;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800; letter-spacing: -0.03em; margin-bottom: 0.6rem;
+    }
+    .page-header p { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
+
+    .contact-wrap {
+      max-width: 720px;
+      margin: 3rem auto;
+      padding: 0 5% 5rem;
+    }
+
+    .email-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 8px 40px var(--shadow);
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    .email-icon { font-size: 2.5rem; margin-bottom: 0.8rem; }
+    .email-label {
+      font-size: 0.78rem; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+    .email-value {
+      font-size: 1.15rem; font-weight: 700;
+      color: var(--brown-dark); margin-bottom: 1.2rem;
+      word-break: break-all;
+    }
+    .copy-btn {
+      background: var(--cream-dark); color: var(--brown-dark);
+      border: none; padding: 0.5rem 1.2rem;
+      border-radius: 999px; font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; transition: background 0.2s, color 0.2s;
+      font-family: inherit;
+    }
+    .copy-btn:hover { background: var(--brown-light); color: var(--white); }
+    .copy-btn.copied { background: var(--brown-dark); color: var(--white); }
+
+    .section-label {
+      font-size: 0.76rem; font-weight: 700; color: var(--brown-light);
+      letter-spacing: 0.12em; text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-size: 1.25rem; font-weight: 800;
+      color: var(--brown-dark);
+      margin-bottom: 0.8rem;
+    }
+    .section-sub {
+      font-size: 0.88rem; color: var(--text-muted);
+      margin-bottom: 1.4rem;
+    }
+
+    .action-cards {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0.8rem; margin-bottom: 2.5rem;
+    }
+    .action-card {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 1.2rem 1rem;
+      box-shadow: 0 4px 20px var(--shadow);
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+      display: flex; align-items: center; gap: 0.8rem;
+    }
+    .action-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px var(--shadow);
+    }
+    .action-icon {
+      font-size: 1.5rem;
+      flex: 0 0 auto;
+      width: 44px; height: 44px;
+      background: var(--cream-dark);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .action-text { flex: 1; min-width: 0; }
+    .action-title {
+      font-size: 0.92rem; font-weight: 700;
+      color: var(--brown-dark);
+      margin-bottom: 0.15rem;
+    }
+    .action-sub {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+    }
+
+    .info-box {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 1.4rem 1.6rem;
+      box-shadow: 0 4px 20px var(--shadow);
+      margin-bottom: 1rem;
+    }
+    .info-box h3 {
+      font-size: 0.95rem; font-weight: 700;
+      color: var(--brown-dark);
+      margin-bottom: 0.6rem;
+    }
+    .info-box ul {
+      margin: 0.4rem 0 0 1.2rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+    .info-box li { margin-bottom: 0.3rem; }
+    .info-box p { font-size: 0.88rem; color: var(--text-muted); }
+    .info-box a { color: var(--brown); }
+
+    footer {
+      background: var(--brown-dark);
+      color: rgba(255,255,255,0.7);
+      padding: 3rem 5%;
+      text-align: center;
+    }
+    footer a { color: rgba(255,255,255,0.85); text-decoration: none; margin: 0 0.8rem; }
+    footer a:hover { color: #fff; }
+    .footer-links { margin-bottom: 1.2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.2rem; }
+    .footer-copy { font-size: 0.82rem; }
+
+    @media (max-width: 500px) {
+      .action-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">☕ CffeaNote</a>
+  <div class="nav-links">
+    <a href="privacy.html">プライバシーポリシー</a>
+    <a href="contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <h1>お問い合わせ</h1>
+  <p>Contact Us</p>
+</div>
+
+<div class="contact-wrap">
+
+  <!-- Email card -->
+  <div class="email-card">
+    <div class="email-icon">📧</div>
+    <div class="email-label">メールアドレス</div>
+    <div class="email-value" id="email-text">nezuzuapps+support@gmail.com</div>
+    <button class="copy-btn" id="copy-btn" type="button">📋 アドレスをコピー</button>
+  </div>
+
+  <!-- Quick action -->
+  <div class="section-label">Quick Action</div>
+  <div class="section-title">用件を選んでメールを書く</div>
+  <p class="section-sub">
+    タップするとメールアプリが立ち上がり、件名が自動入力されます。
+  </p>
+
+  <div class="action-cards">
+    <a href="mailto:nezuzuapps+support@gmail.com?subject=%5BCffeaNote%5D%20%E4%BD%BF%E3%81%84%E6%96%B9%E3%81%AE%E8%B3%AA%E5%95%8F" class="action-card">
+      <div class="action-icon">❓</div>
+      <div class="action-text">
+        <div class="action-title">使い方の質問</div>
+        <div class="action-sub">機能や操作について</div>
+      </div>
+    </a>
+    <a href="mailto:nezuzuapps+support@gmail.com?subject=%5BCffeaNote%5D%20%E4%B8%8D%E5%85%B7%E5%90%88%E3%81%AE%E5%A0%B1%E5%91%8A&body=%E2%96%A0%20%E7%99%BA%E7%94%9F%E3%81%97%E3%81%9F%E7%8A%B6%E6%B3%81%E3%83%BB%E6%93%8D%E4%BD%9C%E6%89%8B%E9%A0%86%EF%BC%9A%0A%0A%E2%96%A0%20iOS%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%EF%BC%9A%0A%0A%E2%96%A0%20%E3%82%A2%E3%83%97%E3%83%AA%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%EF%BC%9A%0A%0A%E2%96%A0%20%E4%BD%BF%E7%94%A8%E6%A9%9F%E7%A8%AE%EF%BC%9A%0A" class="action-card">
+      <div class="action-icon">🐛</div>
+      <div class="action-text">
+        <div class="action-title">不具合の報告</div>
+        <div class="action-sub">バグ・クラッシュ等</div>
+      </div>
+    </a>
+    <a href="mailto:nezuzuapps+support@gmail.com?subject=%5BCffeaNote%5D%20%E6%A9%9F%E8%83%BD%E3%83%AA%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88" class="action-card">
+      <div class="action-icon">💡</div>
+      <div class="action-text">
+        <div class="action-title">機能リクエスト</div>
+        <div class="action-sub">新機能の提案</div>
+      </div>
+    </a>
+    <a href="mailto:nezuzuapps+support@gmail.com?subject=%5BCffeaNote%5D%20%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" class="action-card">
+      <div class="action-icon">🔐</div>
+      <div class="action-text">
+        <div class="action-title">プライバシー</div>
+        <div class="action-sub">権利行使・開示請求等</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Info boxes -->
+  <div class="info-box">
+    <h3>📌 不具合報告のお願い</h3>
+    <p>調査をスムーズに進めるため、以下の情報を添えてご連絡いただけると助かります。</p>
+    <ul>
+      <li>発生した状況・操作手順</li>
+      <li>iOS のバージョン（設定 &gt; 一般 &gt; 情報）</li>
+      <li>アプリのバージョン</li>
+      <li>使用機種（iPhone / iPad のモデル）</li>
+    </ul>
+  </div>
+
+  <div class="info-box">
+    <h3>⏰ 返信の目安</h3>
+    <p>2〜5 営業日以内にご返信いたします。個人開発のため、混雑時は遅れることがあります。あらかじめご了承ください。</p>
+  </div>
+
+  <div class="info-box">
+    <h3>🔐 プライバシーについて</h3>
+    <p>送信いただいたメールは、お問い合わせへの返信目的のみに使用します。本サイトはお問い合わせフォームや解析ツールを一切使用していません。詳しくは <a href="privacy.html">プライバシーポリシー</a> をご確認ください。</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">ホーム</a>
+    <a href="privacy.html">プライバシーポリシー</a>
+    <a href="contact.html">お問い合わせ</a>
+  </div>
+  <p class="footer-copy">© 2026 nezuzuapps. All rights reserved.</p>
+</footer>
+
+<script>
+  (function () {
+    const btn = document.getElementById('copy-btn');
+    const emailEl = document.getElementById('email-text');
+    if (!btn || !emailEl) return;
+    const original = btn.textContent;
+    btn.addEventListener('click', async () => {
+      const text = emailEl.textContent.trim();
+      try {
+        await navigator.clipboard.writeText(text);
+        btn.classList.add('copied');
+        btn.textContent = '✓ コピーしました';
+      } catch (e) {
+        const range = document.createRange();
+        range.selectNode(emailEl);
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        btn.textContent = '↑ アドレスを選択しました';
+      }
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        btn.textContent = original;
+      }, 2200);
+    });
+  })();
+</script>
+
+</body>
+</html>

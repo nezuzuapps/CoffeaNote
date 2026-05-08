@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CffeaNote — Coffee Brewing Journal</title>
+  <meta name="description" content="CffeaNote is an iPhone / iPad app for logging and managing your specialty coffee hand-drip recipes.">
+  <style>
+    :root {
+      --cream: #FAF6F0;
+      --cream-dark: #F0E8DC;
+      --brown-light: #C49A72;
+      --brown: #8B6244;
+      --brown-dark: #5C3D22;
+      --text: #2C1A0E;
+      --text-muted: #7A6555;
+      --white: #FFFFFF;
+      --shadow: rgba(92, 61, 34, 0.15);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,246,240,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--cream-dark);
+      padding: 0 6%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 62px;
+    }
+    .nav-logo {
+      font-size: 1.2rem; font-weight: 700; color: var(--brown-dark);
+      letter-spacing: -0.02em; text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 1.6rem; align-items: center; }
+    .nav-links a {
+      color: var(--text-muted); text-decoration: none; font-size: 0.88rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--brown-dark); }
+    .lang-switch {
+      border: 1px solid var(--cream-dark);
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.76rem !important;
+      font-weight: 600;
+    }
+    .lang-switch:hover { background: var(--cream-dark); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 92vh;
+      display: flex; align-items: center;
+      padding: 5rem 6% 4rem;
+      background:
+        radial-gradient(ellipse 70% 60% at 80% 50%, #ECDCC8 0%, transparent 65%),
+        radial-gradient(ellipse 50% 40% at 20% 80%, #E8D8C4 0%, transparent 55%),
+        var(--cream);
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    .hero-text { flex: 1 1 380px; max-width: 540px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: var(--brown-light); color: var(--white);
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em;
+      padding: 0.3rem 0.9rem; border-radius: 999px;
+      margin-bottom: 1.6rem; text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 900; letter-spacing: -0.04em;
+      color: var(--brown-dark); line-height: 1.12;
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 em { color: var(--brown-light); font-style: normal; }
+    .hero-sub {
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      color: var(--text-muted); line-height: 1.8;
+      margin-bottom: 2.2rem;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 2rem; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--brown-dark); color: var(--white);
+      padding: 0.85rem 1.8rem; border-radius: 14px;
+      font-size: 0.97rem; font-weight: 700; text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 6px 24px rgba(92,61,34,0.28);
+    }
+    .btn-primary:hover { background: var(--brown); transform: translateY(-2px); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      background: transparent; color: var(--brown-dark);
+      border: 1.5px solid var(--brown-light);
+      padding: 0.8rem 1.6rem; border-radius: 14px;
+      font-size: 0.97rem; font-weight: 600; text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-secondary:hover { background: var(--cream-dark); transform: translateY(-2px); }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .hero-tag {
+      font-size: 0.78rem; color: var(--text-muted);
+      background: var(--cream-dark); border-radius: 8px;
+      padding: 0.28rem 0.7rem;
+    }
+    .hero-tag strong { color: var(--brown-dark); }
+
+    /* ── KEY VISUAL ── */
+    .hero-phones {
+      flex: 0 0 auto;
+      max-width: 500px; width: 100%;
+    }
+    .hero-phones img {
+      width: 100%; height: auto;
+      display: block;
+    }
+
+    /* ── FEATURES ── */
+    .section { padding: 6rem 6%; }
+    .section-label {
+      font-size: 0.76rem; font-weight: 700; color: var(--brown-light);
+      letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 800; color: var(--brown-dark); letter-spacing: -0.03em;
+      margin-bottom: 0.8rem;
+    }
+    .section-sub {
+      font-size: 0.98rem; color: var(--text-muted); max-width: 540px;
+      margin-bottom: 3rem; line-height: 1.8;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.4rem; max-width: 1000px;
+    }
+    .feature-card {
+      background: var(--white);
+      border-radius: 20px; padding: 1.8rem;
+      box-shadow: 0 4px 24px var(--shadow);
+      transition: transform 0.2s;
+    }
+    .feature-card:hover { transform: translateY(-4px); }
+    .feature-icon {
+      width: 52px; height: 52px;
+      background: var(--cream-dark); border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; margin-bottom: 1rem;
+    }
+    .feature-title { font-size: 1rem; font-weight: 700; color: var(--brown-dark); margin-bottom: 0.5rem; }
+    .feature-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.65; }
+
+    /* ── DRIPPER ── */
+    .dripper-section {
+      background: linear-gradient(135deg, #3D2510 0%, var(--brown-dark) 100%);
+      color: var(--white);
+      padding: 5rem 6%;
+      text-align: center;
+    }
+    .dripper-section .section-label { color: var(--brown-light); }
+    .dripper-section .section-title { color: var(--white); }
+    .dripper-section .section-sub { color: rgba(255,255,255,0.6); margin: 0 auto 2.5rem; }
+    .dripper-chips { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; max-width: 700px; margin: 0 auto; }
+    .chip {
+      background: rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.85);
+      padding: 0.4rem 1rem; border-radius: 999px;
+      font-size: 0.82rem; border: 1px solid rgba(255,255,255,0.16);
+    }
+
+    /* ── ICLOUD ── */
+    .icloud-section {
+      padding: 6rem 6%;
+      display: flex; align-items: center; gap: 4rem; flex-wrap: wrap;
+      max-width: 1000px; margin: 0 auto;
+    }
+    .icloud-text { flex: 1 1 300px; }
+    .icloud-visual {
+      flex: 0 0 auto;
+      width: 200px; height: 200px;
+      background: var(--cream-dark); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 5rem;
+      box-shadow: 0 20px 60px var(--shadow);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--brown-dark);
+      color: rgba(255,255,255,0.65);
+      padding: 3rem 6%;
+      text-align: center;
+    }
+    footer a { color: rgba(255,255,255,0.82); text-decoration: none; margin: 0 0.8rem; }
+    footer a:hover { color: var(--white); }
+    .footer-links { margin-bottom: 1.2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.2rem; }
+    .footer-copy { font-size: 0.8rem; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero { flex-direction: column; text-align: center; padding-top: 4rem; }
+      .hero-text { max-width: 100%; }
+      .hero-actions { justify-content: center; }
+      .hero-tags { justify-content: center; }
+      .hero-phones { max-width: 360px; }
+      .icloud-section { flex-direction: column; text-align: center; }
+      .icloud-visual { margin: 0 auto; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index_en.html" class="nav-logo">☕ CffeaNote</a>
+  <div class="nav-links">
+    <a href="privacy_en.html">Privacy Policy</a>
+    <a href="contact.html">Contact</a>
+    <a href="index.html" class="lang-switch">JP</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <span class="hero-badge">📱 iPhone / iPad</span>
+    <h1>Capture every cup,<br>down to the <em>last drop</em>.</h1>
+    <p class="hero-sub">
+      CffeaNote helps you carefully log and<br>
+      manage every step of your specialty coffee brews —<br>
+      from extraction process to tasting score, all in one place.
+    </p>
+    <div class="hero-actions">
+      <a href="#" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        Download on the App Store
+      </a>
+      <a href="contact.html" class="btn-secondary">Contact</a>
+    </div>
+    <div class="hero-tags">
+      <span class="hero-tag"><strong>7-point</strong> tasting score</span>
+      <span class="hero-tag"><strong>☁️</strong> iCloud sync</span>
+      <span class="hero-tag"><strong>20+</strong> drippers supported</span>
+      <span class="hero-tag">Free to start</span>
+    </div>
+  </div>
+
+  <!-- KEY VISUAL -->
+  <div class="hero-phones">
+    <img src="img/keyvisual.png" alt="CffeaNote app screens — Recipe list, Brew Guide, Tasting score">
+  </div>
+</section>
+
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="section-label">Features</div>
+  <div class="section-title">Brewing, with greater care.</div>
+  <p class="section-sub">Every detail of your hand-drip, captured in a clean and simple UI.</p>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">📋</div>
+      <div class="feature-title">Brew Logs</div>
+      <p class="feature-desc">View, create, edit, and duplicate recipes. Mark favorites for quick access whenever you brew.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🫘</div>
+      <div class="feature-title">Bean Library</div>
+      <p class="feature-desc">Track origin, farm, processing, and roast level in detail. Reuse beans you've already logged to quickly link them to new recipes.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⏱</div>
+      <div class="feature-title">Brew Guide</div>
+      <p class="feature-desc">Step-by-step real-time guidance based on your recipe. See pour timing, water amount, and temperature as you brew.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⭐</div>
+      <div class="feature-title">7-Point Tasting Score</div>
+      <p class="feature-desc">Rate acidity, sweetness, bitterness, body, cleanliness, aftertaste, and balance out of 10 — for an overall score out of 100.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">☁️</div>
+      <div class="feature-title">iCloud Sync</div>
+      <p class="feature-desc">Recipes auto-sync between iPhone and iPad. Your data is safely stored in your own iCloud.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔍</div>
+      <div class="feature-title">Recipe Compare</div>
+      <p class="feature-desc">View two recipes side by side with diff highlighting — find what to tweak for an even better next cup.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DRIPPER -->
+<section class="dripper-section">
+  <div class="section-label">Dripper Support</div>
+  <h2 class="section-title" style="margin-bottom:0.8rem;">More than 20 drippers supported</h2>
+  <p class="section-sub">Log your recipes with the dripper you love.</p>
+  <div class="dripper-chips">
+    <span class="chip">Hario V60</span>
+    <span class="chip">Hario V60 Switch</span>
+    <span class="chip">Hario V60 MUGEN</span>
+    <span class="chip">Hario V60 NEO</span>
+    <span class="chip">Chemex</span>
+    <span class="chip">Kalita Wave</span>
+    <span class="chip">Origami Dripper</span>
+    <span class="chip">CAFEC Flower Dripper</span>
+    <span class="chip">Fellow Stagg X</span>
+    <span class="chip">Fellow Stagg XF</span>
+    <span class="chip">Orea Brewer</span>
+    <span class="chip">April Brewer</span>
+    <span class="chip">KONO Meimon</span>
+    <span class="chip">Timemore B75</span>
+    <span class="chip">Timemore Crystal Eye</span>
+    <span class="chip">Graycano</span>
+    <span class="chip">Melitta Aroma Filter</span>
+    <span class="chip">+ more</span>
+  </div>
+</section>
+
+<!-- ICLOUD -->
+<section style="background: var(--cream);">
+  <div class="icloud-section">
+    <div class="icloud-text">
+      <div class="section-label">iCloud Sync</div>
+      <h2 class="section-title">Wherever you are,<br>your recipes follow.</h2>
+      <p style="color: var(--text-muted); line-height: 1.8;">
+        CffeaNote uses CloudKit for iCloud sync. Your recipes auto-sync between iPhone and iPad, so the latest record is always available on every device. Your data stays safely in your own iCloud.
+      </p>
+    </div>
+    <div class="icloud-visual">☁️</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="index_en.html">Home</a>
+    <a href="privacy_en.html">Privacy Policy</a>
+    <a href="contact.html">Contact</a>
+    <a href="index.html">日本語</a>
+  </div>
+  <p class="footer-copy">© 2026 nezuzuapps. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
