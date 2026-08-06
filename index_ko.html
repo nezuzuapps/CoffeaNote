@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CffeaNote — Coffee Brewing Journal</title>
-  <meta name="description" content="CffeaNote is an iPhone / iPad app for logging and managing your specialty coffee hand-drip recipes.">
+  <title>CffeaNote — 커피 추출 기록 앱</title>
+  <meta name="description" content="CffeaNote는 스페셜티 커피의 핸드드립을 기록하고 관리하는 iPhone / iPad 앱입니다.">
   <style>
     :root {
       --cream: #FAF6F0;
@@ -19,7 +19,7 @@
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
       background: var(--cream);
       color: var(--text);
       line-height: 1.7;
@@ -84,8 +84,8 @@
     }
     .hero h1 {
       font-size: clamp(2.4rem, 5vw, 3.8rem);
-      font-weight: 900; letter-spacing: -0.04em;
-      color: var(--brown-dark); line-height: 1.12;
+      font-weight: 900; letter-spacing: -0.02em;
+      color: var(--brown-dark); line-height: 1.2;
       margin-bottom: 1.2rem;
     }
     .hero h1 em { color: var(--brown-light); font-style: normal; }
@@ -139,7 +139,7 @@
     }
     .section-title {
       font-size: clamp(1.6rem, 4vw, 2.4rem);
-      font-weight: 800; color: var(--brown-dark); letter-spacing: -0.03em;
+      font-weight: 800; color: var(--brown-dark); letter-spacing: -0.02em;
       margin-bottom: 0.8rem;
     }
     .section-sub {
@@ -229,14 +229,14 @@
 
 <!-- NAV -->
 <nav>
-  <a href="index_en.html" class="nav-logo">☕ CffeaNote</a>
+  <a href="index_ko.html" class="nav-logo">☕ CffeaNote</a>
   <div class="nav-links">
-    <a href="privacy_en.html">Privacy Policy</a>
-    <a href="contact.html">Contact</a>
+    <a href="privacy_ko.html">개인정보처리방침</a>
+    <a href="contact.html">문의하기</a>
     <div class="lang-group">
       <a href="index.html" class="lang-switch">JA</a>
-      <a href="index_en.html" class="lang-switch active">EN</a>
-      <a href="index_ko.html" class="lang-switch">KO</a>
+      <a href="index_en.html" class="lang-switch">EN</a>
+      <a href="index_ko.html" class="lang-switch active">KO</a>
       <a href="index_zh-Hans.html" class="lang-switch">简</a>
       <a href="index_zh-Hant.html" class="lang-switch">繁</a>
     </div>
@@ -247,30 +247,30 @@
 <section class="hero">
   <div class="hero-text">
     <span class="hero-badge">📱 iPhone / iPad</span>
-    <h1>Capture every cup,<br>down to the <em>last drop</em>.</h1>
+    <h1>당신의 한 잔을,<br><em>기록</em>으로 남기세요.</h1>
     <p class="hero-sub">
-      CffeaNote helps you carefully log and<br>
-      manage every step of your specialty coffee brews —<br>
-      from extraction process to tasting score, all in one place.
+      CffeaNote는 스페셜티 커피의<br>
+      핸드드립을 꼼꼼하게 기록하고 관리하는 앱입니다.<br>
+      추출 과정부터 평가까지, 모두 한곳에서.
     </p>
     <div class="hero-actions">
       <a href="https://apps.apple.com/jp/app/coffeanote/id6763574990" class="btn-primary">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        Download on the App Store
+        App Store에서 다운로드
       </a>
-      <a href="contact.html" class="btn-secondary">Contact</a>
+      <a href="contact.html" class="btn-secondary">문의하기</a>
     </div>
     <div class="hero-tags">
-      <span class="hero-tag"><strong>7-point</strong> tasting score</span>
-      <span class="hero-tag"><strong>☁️</strong> iCloud sync</span>
-      <span class="hero-tag"><strong>20+</strong> drippers supported</span>
-      <span class="hero-tag">Free to start</span>
+      <span class="hero-tag"><strong>7개</strong> 평가 항목</span>
+      <span class="hero-tag"><strong>☁️</strong> iCloud 동기화</span>
+      <span class="hero-tag"><strong>20+</strong> 드리퍼 지원</span>
+      <span class="hero-tag">무료로 시작하기</span>
     </div>
   </div>
 
   <!-- KEY VISUAL -->
   <div class="hero-phones">
-    <img src="img/keyvisual.png" alt="CffeaNote app screens — Recipe list, Brew Guide, Tasting score">
+    <img src="img/keyvisual.png" alt="CffeaNote 앱 화면 - 레시피 목록·Brew Guide·평가 스코어">
   </div>
 </section>
 
@@ -278,38 +278,38 @@
 <!-- FEATURES -->
 <section class="section" id="features">
   <div class="section-label">Features</div>
-  <div class="section-title">Brewing, with greater care.</div>
-  <p class="section-sub">Every detail of your hand-drip, captured in a clean and simple UI.</p>
+  <div class="section-title">기록을, 더 정성스럽게.</div>
+  <p class="section-sub">핸드드립의 디테일까지 기록할 수 있는 기능을 심플한 UI에 담았습니다.</p>
   <div class="features-grid">
     <div class="feature-card">
       <div class="feature-icon">📋</div>
-      <div class="feature-title">Brew Logs</div>
-      <p class="feature-desc">View, create, edit, and duplicate recipes. Mark favorites for quick access whenever you brew.</p>
+      <div class="feature-title">추출 로그 관리</div>
+      <p class="feature-desc">레시피 목록·상세 보기, 새로 만들기, 편집, 복제가 가능합니다. 즐겨찾기로 언제든 빠르게 접근하세요.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">🫘</div>
-      <div class="feature-title">Bean Library</div>
-      <p class="feature-desc">Track origin, farm, processing, and roast level in detail. Reuse beans you've already logged to quickly link them to new recipes.</p>
+      <div class="feature-title">원두(Bean) 관리</div>
+      <p class="feature-desc">산지·농장·가공 방식·로스팅 정도까지 자세히 기록하세요. 이전에 사용한 원두를 재사용해 바로 레시피에 연결할 수 있습니다.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">⏱</div>
       <div class="feature-title">Brew Guide</div>
-      <p class="feature-desc">Step-by-step real-time guidance based on your recipe. See pour timing, water amount, and temperature as you brew.</p>
+      <p class="feature-desc">레시피를 기반으로 실시간 단계별 가이드를 제공합니다. 물 붓는 타이밍·양·온도를 확인하며 추출하세요.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">⭐</div>
-      <div class="feature-title">7-Point Tasting Score</div>
-      <p class="feature-desc">Rate acidity, sweetness, bitterness, body, cleanliness, aftertaste, and balance out of 10 — for an overall score out of 100.</p>
+      <div class="feature-title">7개 항목 평가 스코어</div>
+      <p class="feature-desc">산미·단맛·쓴맛·바디·클린함·애프터테이스트·밸런스를 10점 만점으로 기록합니다. 총 100점으로 한 잔을 평가하세요.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">☁️</div>
-      <div class="feature-title">iCloud Sync</div>
-      <p class="feature-desc">Recipes auto-sync between iPhone and iPad. Your data is safely stored in your own iCloud.</p>
+      <div class="feature-title">iCloud 동기화</div>
+      <p class="feature-desc">iPhone과 iPad 간 레시피가 자동으로 동기화됩니다. 중요한 데이터는 클라우드에 안전하게 보관됩니다.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">🔍</div>
-      <div class="feature-title">Recipe Compare</div>
-      <p class="feature-desc">View two recipes side by side with diff highlighting — find what to tweak for an even better next cup.</p>
+      <div class="feature-title">레시피 비교</div>
+      <p class="feature-desc">두 개의 레시피를 나란히 비교하세요. 차이점 하이라이트 기능으로 다음 한 잔을 더 좋게 만들 개선점을 찾을 수 있습니다.</p>
     </div>
   </div>
 </section>
@@ -317,8 +317,8 @@
 <!-- DRIPPER -->
 <section class="dripper-section">
   <div class="section-label">Dripper Support</div>
-  <h2 class="section-title" style="margin-bottom:0.8rem;">More than 20 drippers supported</h2>
-  <p class="section-sub">Log your recipes with the dripper you love.</p>
+  <h2 class="section-title" style="margin-bottom:0.8rem;">20종 이상의 드리퍼 지원</h2>
+  <p class="section-sub">좋아하는 드리퍼로 당신의 레시피를 기록하세요.</p>
   <div class="dripper-chips">
     <span class="chip">Hario V60</span>
     <span class="chip">Hario V60 Switch</span>
@@ -337,7 +337,7 @@
     <span class="chip">Timemore Crystal Eye</span>
     <span class="chip">Graycano</span>
     <span class="chip">Melitta Aroma Filter</span>
-    <span class="chip">+ more</span>
+    <span class="chip">+ 기타</span>
   </div>
 </section>
 
@@ -346,9 +346,9 @@
   <div class="icloud-section">
     <div class="icloud-text">
       <div class="section-label">iCloud Sync</div>
-      <h2 class="section-title">Wherever you are,<br>your recipes follow.</h2>
+      <h2 class="section-title">어디에서나,<br>당신의 레시피와 함께.</h2>
       <p style="color: var(--text-muted); line-height: 1.8;">
-        CffeaNote uses CloudKit for iCloud sync. Your recipes auto-sync between iPhone and iPad, so the latest record is always available on every device. Your data stays safely in your own iCloud.
+        CffeaNote는 CloudKit을 이용한 iCloud 동기화를 지원합니다. iPhone과 iPad에서 레시피가 자동으로 동기화되어 어떤 기기에서든 최신 기록에 접근할 수 있습니다. 중요한 데이터는 클라우드에 안전하게 보관됩니다.
       </p>
     </div>
     <div class="icloud-visual">☁️</div>
@@ -358,9 +358,9 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-links">
-    <a href="index_en.html">Home</a>
-    <a href="privacy_en.html">Privacy Policy</a>
-    <a href="contact.html">Contact</a>
+    <a href="index_ko.html">홈</a>
+    <a href="privacy_ko.html">개인정보처리방침</a>
+    <a href="contact.html">문의하기</a>
   </div>
   <div class="footer-langs">
     <a href="index.html">日本語</a>
