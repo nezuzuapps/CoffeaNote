@@ -3,13 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CffeaNote — コーヒー抽出記録アプリ</title>
-  <meta name="description" content="CffeaNote は、スペシャルティコーヒーのハンドドリップを記録・管理するための iPhone / iPad アプリです。">
+  <title>CoffeaNote — ハンドドリップのレシピ記録アプリ｜V60・Apple Watch対応</title>
+  <meta name="description" content="コーヒー豆・挽き目・湯温・注湯タイミングを記録し、理想の一杯を再現するハンドドリップ管理アプリ。V60やスイッチ式ドリッパーに対応し、Apple WatchでBrew Guideも使えます。iCloud同期対応。">
+  <link rel="canonical" href="https://nezuzuapps.github.io/CoffeaNote/index.html">
+  <link rel="alternate" hreflang="ja" href="https://nezuzuapps.github.io/CoffeaNote/index.html">
+  <link rel="alternate" hreflang="en" href="https://nezuzuapps.github.io/CoffeaNote/index_en.html">
+  <link rel="alternate" hreflang="ko" href="https://nezuzuapps.github.io/CoffeaNote/index_ko.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://nezuzuapps.github.io/CoffeaNote/index_zh-Hans.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://nezuzuapps.github.io/CoffeaNote/index_zh-Hant.html">
+  <link rel="alternate" hreflang="x-default" href="https://nezuzuapps.github.io/CoffeaNote/index.html">
+  <link rel="icon" type="image/png" href="img/favicon/favicon-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="img/favicon/favicon-16.png" sizes="16x16">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CoffeaNote">
+  <meta property="og:title" content="CoffeaNote — ハンドドリップのレシピ記録アプリ｜V60・Apple Watch対応">
+  <meta property="og:description" content="コーヒー豆・挽き目・湯温・注湯タイミングを記録し、理想の一杯を再現するハンドドリップ管理アプリ。V60やスイッチ式ドリッパーに対応し、Apple WatchでBrew Guideも使えます。iCloud同期対応。">
+  <meta property="og:image" content="https://nezuzuapps.github.io/CoffeaNote/img/keyvisual.png">
+  <meta property="og:url" content="https://nezuzuapps.github.io/CoffeaNote/index.html">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CoffeaNote — ハンドドリップのレシピ記録アプリ｜V60・Apple Watch対応">
+  <meta name="twitter:description" content="コーヒー豆・挽き目・湯温・注湯タイミングを記録し、理想の一杯を再現するハンドドリップ管理アプリ。V60やスイッチ式ドリッパーに対応し、Apple WatchでBrew Guideも使えます。iCloud同期対応。">
+  <meta name="twitter:image" content="https://nezuzuapps.github.io/CoffeaNote/img/keyvisual.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "CoffeaNote",
+    "operatingSystem": "iOS, iPadOS, watchOS",
+    "applicationCategory": "LifestyleApplication",
+    "description": "コーヒー豆・挽き目・湯温・注湯タイミングを記録し、理想の一杯を再現するハンドドリップレシピ管理アプリ。V60やスイッチ式ドリッパーに対応し、Apple WatchでBrew Guideも使えます。",
+    "url": "https://nezuzuapps.github.io/CoffeaNote/index.html",
+    "image": "https://nezuzuapps.github.io/CoffeaNote/img/keyvisual.png",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "nezuzuapps"
+    }
+  }
+  </script>
   <style>
     :root {
       --cream: #FAF6F0;
       --cream-dark: #F0E8DC;
       --brown-light: #C49A72;
+      --tan-light: #E4C9A8;
       --brown: #8B6244;
       --brown-dark: #5C3D22;
       --text: #2C1A0E;
@@ -77,7 +121,7 @@
     .hero-text { flex: 1 1 380px; max-width: 520px; }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 0.4rem;
-      background: var(--brown-light); color: var(--white);
+      background: var(--brown-dark); color: var(--white);
       font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em;
       padding: 0.3rem 0.9rem; border-radius: 999px;
       margin-bottom: 1.6rem; text-transform: uppercase;
@@ -132,7 +176,12 @@
     }
 
     /* ── FEATURES ── */
-    .section { padding: 6rem 6%; }
+    .section {
+      padding: 6rem 6%;
+      background:
+        radial-gradient(ellipse 45% 40% at 90% 10%, #F0E4D4 0%, transparent 55%),
+        radial-gradient(ellipse 40% 35% at 5% 90%, #F0E4D4 0%, transparent 50%);
+    }
     .section-label {
       font-size: 0.76rem; font-weight: 700; color: var(--brown-light);
       letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.6rem;
@@ -174,7 +223,7 @@
       padding: 5rem 6%;
       text-align: center;
     }
-    .dripper-section .section-label { color: var(--brown-light); }
+    .dripper-section .section-label { color: var(--tan-light); }
     .dripper-section .section-title { color: var(--white); }
     .dripper-section .section-sub { color: rgba(255,255,255,0.6); margin: 0 auto 2.5rem; }
     .dripper-chips { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; max-width: 700px; margin: 0 auto; }
@@ -193,13 +242,38 @@
     }
     .icloud-text { flex: 1 1 300px; }
     .icloud-visual {
+      position: relative;
       flex: 0 0 auto;
-      width: 200px; height: 200px;
+      width: 260px; height: 260px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .icloud-ring {
+      position: absolute; border-radius: 50%;
+      border: 1.5px dashed var(--brown-light);
+      opacity: 0.4;
+    }
+    .icloud-ring-outer { width: 260px; height: 260px; }
+    .icloud-ring-mid { width: 190px; height: 190px; opacity: 0.55; }
+    .icloud-cloud {
+      position: relative; z-index: 2;
+      width: 140px; height: 140px;
       background: var(--cream-dark); border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      font-size: 5rem;
+      font-size: 3.6rem;
       box-shadow: 0 20px 60px var(--shadow);
     }
+    .icloud-device {
+      position: absolute; z-index: 3;
+      display: flex; flex-direction: column; align-items: center; gap: 0.15rem;
+      background: var(--white);
+      border-radius: 14px;
+      padding: 0.5rem 0.8rem;
+      font-size: 1.3rem;
+      box-shadow: 0 10px 26px var(--shadow);
+    }
+    .icloud-device span { font-size: 0.6rem; font-weight: 700; color: var(--brown-dark); }
+    .icloud-device-left { top: 4%; left: -4%; }
+    .icloud-device-right { bottom: 4%; right: -4%; }
 
     /* ── FOOTER ── */
     footer {
@@ -229,7 +303,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="index.html" class="nav-logo">☕ CffeaNote</a>
+  <a href="index.html" class="nav-logo">☕ CoffeaNote</a>
   <div class="nav-links">
     <a href="privacy.html">プライバシーポリシー</a>
     <a href="contact.html">お問い合わせ</a>
@@ -246,10 +320,10 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <span class="hero-badge">📱 iPhone / iPad</span>
+    <span class="hero-badge">📱 iPhone / iPad / ⌚ Apple Watch</span>
     <h1>あなたの一杯を、<br><em>記録</em>に残す。</h1>
     <p class="hero-sub">
-      CffeaNote は、スペシャルティコーヒーの<br>
+      CoffeaNote は、スペシャルティコーヒーの<br>
       ハンドドリップを丁寧に記録・管理するアプリです。<br>
       抽出ステップから評価まで、すべて一か所で。
     </p>
@@ -263,6 +337,7 @@
     <div class="hero-tags">
       <span class="hero-tag"><strong>7項目</strong> 評価スコア</span>
       <span class="hero-tag"><strong>☁️</strong> iCloud 同期</span>
+      <span class="hero-tag"><strong>⌚</strong> Apple Watch対応</span>
       <span class="hero-tag"><strong>20+</strong> ドリッパー対応</span>
       <span class="hero-tag">無料で始められる</span>
     </div>
@@ -270,7 +345,7 @@
 
   <!-- KEY VISUAL -->
   <div class="hero-phones">
-    <img src="img/keyvisual.png" alt="CffeaNote アプリ画面 - レシピ一覧・Brew Guide・評価スコア">
+    <img src="img/keyvisual.png" alt="CoffeaNote アプリ画面 - レシピ一覧・Brew Guide・評価スコア">
   </div>
 </section>
 
@@ -297,6 +372,11 @@
       <p class="feature-desc">レシピを元にリアルタイムでステップをガイド。注湯タイミング・量・湯温を見ながら淹れられます。</p>
     </div>
     <div class="feature-card">
+      <div class="feature-icon">⌚</div>
+      <div class="feature-title">Apple Watch対応</div>
+      <p class="feature-desc">Apple Watch単体でレシピの確認とBrew Guideの実行が可能。iPhoneと自動で同期し、操作はどちらからでも反映されます。</p>
+    </div>
+    <div class="feature-card">
       <div class="feature-icon">⭐</div>
       <div class="feature-title">7項目の評価スコア</div>
       <p class="feature-desc">酸味・甘味・苦味・ボディ・クリーンさ・後味・バランスを 10 点満点で記録。総合評価 100 点で一杯を評価します。</p>
@@ -310,6 +390,11 @@
       <div class="feature-icon">🔍</div>
       <div class="feature-title">レシピ比較</div>
       <p class="feature-desc">2 つのレシピを並べて比較。差分ハイライト機能で、次の一杯をより良くするための改善点を見つけられます。</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🤖</div>
+      <div class="feature-title">生成AI向けコピー</div>
+      <p class="feature-desc">レシピと評価を生成AI向けのテキストにしてコピー。お好みのAIサービスに貼り付けて改善アドバイスをもらえます。</p>
     </div>
   </div>
 </section>
@@ -342,16 +427,25 @@
 </section>
 
 <!-- ICLOUD -->
-<section style="background: var(--cream);">
+<section style="background:
+    radial-gradient(ellipse 55% 50% at 12% 25%, #F0E4D4 0%, transparent 60%),
+    radial-gradient(ellipse 50% 45% at 88% 75%, #ECDCC8 0%, transparent 55%),
+    var(--cream);">
   <div class="icloud-section">
     <div class="icloud-text">
       <div class="section-label">iCloud Sync</div>
       <h2 class="section-title">どこにいても、<br>あなたのレシピと。</h2>
       <p style="color: var(--text-muted); line-height: 1.8;">
-        CffeaNote は CloudKit を使った iCloud 同期に対応。iPhone と iPad でレシピが自動的に同期されるので、どのデバイスでも最新の記録にアクセスできます。大切なデータはクラウドに安全に保管されます。
+        CoffeaNote は CloudKit を使った iCloud 同期に対応。iPhone と iPad でレシピが自動的に同期されるので、どのデバイスでも最新の記録にアクセスできます。大切なデータはクラウドに安全に保管されます。
       </p>
     </div>
-    <div class="icloud-visual">☁️</div>
+    <div class="icloud-visual">
+      <div class="icloud-ring icloud-ring-outer"></div>
+      <div class="icloud-ring icloud-ring-mid"></div>
+      <div class="icloud-cloud">☁️</div>
+      <div class="icloud-device icloud-device-left">📱<span>iPhone</span></div>
+      <div class="icloud-device icloud-device-right">📱<span>iPad</span></div>
+    </div>
   </div>
 </section>
 

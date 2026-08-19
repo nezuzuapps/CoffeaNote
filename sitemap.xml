@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://nezuzuapps.github.io/CoffeaNote/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://nezuzuapps.github.io/CoffeaNote/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nezuzuapps.github.io/CoffeaNote/index_en.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://nezuzuapps.github.io/CoffeaNote/index_ko.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://nezuzuapps.github.io/CoffeaNote/index_zh-Hans.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://nezuzuapps.github.io/CoffeaNote/index_zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nezuzuapps.github.io/CoffeaNote/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://nezuzuapps.github.io/CoffeaNote/index_en.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://nezuzuapps.github.io/CoffeaNote/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nezuzuapps.github.io/CoffeaNote/index_en.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://nezuzuapps.github.io/CoffeaNote/index_ko.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://nezuzuapps.github.io/CoffeaNote/index_zh-Hans.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://nezuzuapps.github.io/CoffeaNote/index_zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nezuzuapps.github.io/CoffeaNote/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://nezuzuapps.github.io/CoffeaNote/index_ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://nezuzuapps.github.io/CoffeaNote/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nezuzuapps.github.io/CoffeaNote/index_en.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://nezuzuapps.github.io/CoffeaNote/index_ko.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://nezuzuapps.github.io/CoffeaNote/index_zh-Hans.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://nezuzuapps.github.io/CoffeaNote/index_zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nezuzuapps.github.io/CoffeaNote/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://nezuzuapps.github.io/CoffeaNote/index_zh-Hans.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://nezuzuapps.github.io/CoffeaNote/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nezuzuapps.github.io/CoffeaNote/index_en.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://nezuzuapps.github.io/CoffeaNote/index_ko.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://nezuzuapps.github.io/CoffeaNote/index_zh-Hans.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://nezuzuapps.github.io/CoffeaNote/index_zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nezuzuapps.github.io/CoffeaNote/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://nezuzuapps.github.io/CoffeaNote/index_zh-Hant.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://nezuzuapps.github.io/CoffeaNote/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nezuzuapps.github.io/CoffeaNote/index_en.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://nezuzuapps.github.io/CoffeaNote/index_ko.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://nezuzuapps.github.io/CoffeaNote/index_zh-Hans.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://nezuzuapps.github.io/CoffeaNote/index_zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nezuzuapps.github.io/CoffeaNote/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://nezuzuapps.github.io/CoffeaNote/contact.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://nezuzuapps.github.io/CoffeaNote/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://nezuzuapps.github.io/CoffeaNote/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nezuzuapps.github.io/CoffeaNote/privacy_en.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://nezuzuapps.github.io/CoffeaNote/privacy_ko.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://nezuzuapps.github.io/CoffeaNote/privacy_zh-Hans.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://nezuzuapps.github.io/CoffeaNote/privacy_zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nezuzuapps.github.io/CoffeaNote/privacy.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://nezuzuapps.github.io/CoffeaNote/privacy_en.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://nezuzuapps.github.io/CoffeaNote/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nezuzuapps.github.io/CoffeaNote/privacy_en.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://nezuzuapps.github.io/CoffeaNote/privacy_ko.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://nezuzuapps.github.io/CoffeaNote/privacy_zh-Hans.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://nezuzuapps.github.io/CoffeaNote/privacy_zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nezuzuapps.github.io/CoffeaNote/privacy.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://nezuzuapps.github.io/CoffeaNote/privacy_ko.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://nezuzuapps.github.io/CoffeaNote/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nezuzuapps.github.io/CoffeaNote/privacy_en.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://nezuzuapps.github.io/CoffeaNote/privacy_ko.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://nezuzuapps.github.io/CoffeaNote/privacy_zh-Hans.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://nezuzuapps.github.io/CoffeaNote/privacy_zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nezuzuapps.github.io/CoffeaNote/privacy.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://nezuzuapps.github.io/CoffeaNote/privacy_zh-Hans.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://nezuzuapps.github.io/CoffeaNote/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nezuzuapps.github.io/CoffeaNote/privacy_en.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://nezuzuapps.github.io/CoffeaNote/privacy_ko.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://nezuzuapps.github.io/CoffeaNote/privacy_zh-Hans.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://nezuzuapps.github.io/CoffeaNote/privacy_zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nezuzuapps.github.io/CoffeaNote/privacy.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://nezuzuapps.github.io/CoffeaNote/privacy_zh-Hant.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://nezuzuapps.github.io/CoffeaNote/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nezuzuapps.github.io/CoffeaNote/privacy_en.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://nezuzuapps.github.io/CoffeaNote/privacy_ko.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://nezuzuapps.github.io/CoffeaNote/privacy_zh-Hans.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://nezuzuapps.github.io/CoffeaNote/privacy_zh-Hant.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nezuzuapps.github.io/CoffeaNote/privacy.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

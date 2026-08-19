@@ -3,13 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CffeaNote — 咖啡冲煮记录应用</title>
-  <meta name="description" content="CffeaNote 是一款用于记录和管理精品咖啡手冲的 iPhone / iPad 应用。">
+  <title>CoffeaNote — 手冲咖啡配方记录应用（支持V60・Apple Watch）</title>
+  <meta name="description" content="记录咖啡粉量、研磨度、水温与注水时机，重现你的完美一杯。支持V60及开关式滤杯，并可在Apple Watch上使用Brew Guide冲煮引导。支持iCloud同步。">
+  <link rel="canonical" href="https://nezuzuapps.github.io/CoffeaNote/index_zh-Hans.html">
+  <link rel="alternate" hreflang="ja" href="https://nezuzuapps.github.io/CoffeaNote/index.html">
+  <link rel="alternate" hreflang="en" href="https://nezuzuapps.github.io/CoffeaNote/index_en.html">
+  <link rel="alternate" hreflang="ko" href="https://nezuzuapps.github.io/CoffeaNote/index_ko.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://nezuzuapps.github.io/CoffeaNote/index_zh-Hans.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://nezuzuapps.github.io/CoffeaNote/index_zh-Hant.html">
+  <link rel="alternate" hreflang="x-default" href="https://nezuzuapps.github.io/CoffeaNote/index.html">
+  <link rel="icon" type="image/png" href="img/favicon/favicon-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="img/favicon/favicon-16.png" sizes="16x16">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CoffeaNote">
+  <meta property="og:title" content="CoffeaNote — 手冲咖啡配方记录应用（支持V60・Apple Watch）">
+  <meta property="og:description" content="记录咖啡粉量、研磨度、水温与注水时机，重现你的完美一杯。支持V60及开关式滤杯，并可在Apple Watch上使用Brew Guide冲煮引导。支持iCloud同步。">
+  <meta property="og:image" content="https://nezuzuapps.github.io/CoffeaNote/img/keyvisual.png">
+  <meta property="og:url" content="https://nezuzuapps.github.io/CoffeaNote/index_zh-Hans.html">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CoffeaNote — 手冲咖啡配方记录应用（支持V60・Apple Watch）">
+  <meta name="twitter:description" content="记录咖啡粉量、研磨度、水温与注水时机，重现你的完美一杯。支持V60及开关式滤杯，并可在Apple Watch上使用Brew Guide冲煮引导。支持iCloud同步。">
+  <meta name="twitter:image" content="https://nezuzuapps.github.io/CoffeaNote/img/keyvisual.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "CoffeaNote",
+    "operatingSystem": "iOS, iPadOS, watchOS",
+    "applicationCategory": "LifestyleApplication",
+    "description": "记录咖啡粉量、研磨度、水温与注水时机，重现你的完美一杯。支持V60及开关式滤杯，并可在Apple Watch上使用Brew Guide冲煮引导。",
+    "url": "https://nezuzuapps.github.io/CoffeaNote/index_zh-Hans.html",
+    "image": "https://nezuzuapps.github.io/CoffeaNote/img/keyvisual.png",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "nezuzuapps"
+    }
+  }
+  </script>
   <style>
     :root {
       --cream: #FAF6F0;
       --cream-dark: #F0E8DC;
       --brown-light: #C49A72;
+      --tan-light: #E4C9A8;
       --brown: #8B6244;
       --brown-dark: #5C3D22;
       --text: #2C1A0E;
@@ -77,7 +121,7 @@
     .hero-text { flex: 1 1 380px; max-width: 540px; }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 0.4rem;
-      background: var(--brown-light); color: var(--white);
+      background: var(--brown-dark); color: var(--white);
       font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em;
       padding: 0.3rem 0.9rem; border-radius: 999px;
       margin-bottom: 1.6rem; text-transform: uppercase;
@@ -132,7 +176,12 @@
     }
 
     /* ── FEATURES ── */
-    .section { padding: 6rem 6%; }
+    .section {
+      padding: 6rem 6%;
+      background:
+        radial-gradient(ellipse 45% 40% at 90% 10%, #F0E4D4 0%, transparent 55%),
+        radial-gradient(ellipse 40% 35% at 5% 90%, #F0E4D4 0%, transparent 50%);
+    }
     .section-label {
       font-size: 0.76rem; font-weight: 700; color: var(--brown-light);
       letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.6rem;
@@ -174,7 +223,7 @@
       padding: 5rem 6%;
       text-align: center;
     }
-    .dripper-section .section-label { color: var(--brown-light); }
+    .dripper-section .section-label { color: var(--tan-light); }
     .dripper-section .section-title { color: var(--white); }
     .dripper-section .section-sub { color: rgba(255,255,255,0.6); margin: 0 auto 2.5rem; }
     .dripper-chips { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; max-width: 700px; margin: 0 auto; }
@@ -193,13 +242,38 @@
     }
     .icloud-text { flex: 1 1 300px; }
     .icloud-visual {
+      position: relative;
       flex: 0 0 auto;
-      width: 200px; height: 200px;
+      width: 260px; height: 260px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .icloud-ring {
+      position: absolute; border-radius: 50%;
+      border: 1.5px dashed var(--brown-light);
+      opacity: 0.4;
+    }
+    .icloud-ring-outer { width: 260px; height: 260px; }
+    .icloud-ring-mid { width: 190px; height: 190px; opacity: 0.55; }
+    .icloud-cloud {
+      position: relative; z-index: 2;
+      width: 140px; height: 140px;
       background: var(--cream-dark); border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      font-size: 5rem;
+      font-size: 3.6rem;
       box-shadow: 0 20px 60px var(--shadow);
     }
+    .icloud-device {
+      position: absolute; z-index: 3;
+      display: flex; flex-direction: column; align-items: center; gap: 0.15rem;
+      background: var(--white);
+      border-radius: 14px;
+      padding: 0.5rem 0.8rem;
+      font-size: 1.3rem;
+      box-shadow: 0 10px 26px var(--shadow);
+    }
+    .icloud-device span { font-size: 0.6rem; font-weight: 700; color: var(--brown-dark); }
+    .icloud-device-left { top: 4%; left: -4%; }
+    .icloud-device-right { bottom: 4%; right: -4%; }
 
     /* ── FOOTER ── */
     footer {
@@ -229,7 +303,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="index_zh-Hans.html" class="nav-logo">☕ CffeaNote</a>
+  <a href="index_zh-Hans.html" class="nav-logo">☕ CoffeaNote</a>
   <div class="nav-links">
     <a href="privacy_zh-Hans.html">隐私政策</a>
     <a href="contact.html">联系我们</a>
@@ -246,10 +320,10 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <span class="hero-badge">📱 iPhone / iPad</span>
+    <span class="hero-badge">📱 iPhone / iPad / ⌚ Apple Watch</span>
     <h1>为你的每一杯,<br>留下<em>记录</em>。</h1>
     <p class="hero-sub">
-      CffeaNote 是一款用于细致记录和<br>
+      CoffeaNote 是一款用于细致记录和<br>
       管理精品咖啡手冲的应用。<br>
       从萃取步骤到品鉴评分，一站式管理。
     </p>
@@ -263,6 +337,7 @@
     <div class="hero-tags">
       <span class="hero-tag"><strong>7 项</strong>评分维度</span>
       <span class="hero-tag"><strong>☁️</strong> iCloud 同步</span>
+      <span class="hero-tag"><strong>⌚</strong> 支持 Apple Watch</span>
       <span class="hero-tag"><strong>20+</strong> 款滤杯支持</span>
       <span class="hero-tag">免费开始使用</span>
     </div>
@@ -270,7 +345,7 @@
 
   <!-- KEY VISUAL -->
   <div class="hero-phones">
-    <img src="img/keyvisual.png" alt="CffeaNote 应用界面 - 配方列表、冲煮引导、品鉴评分">
+    <img src="img/keyvisual.png" alt="CoffeaNote 应用界面 - 配方列表、冲煮引导、品鉴评分">
   </div>
 </section>
 
@@ -297,6 +372,11 @@
       <p class="feature-desc">根据配方进行实时分步引导，边看注水时机、水量与水温边冲煮。</p>
     </div>
     <div class="feature-card">
+      <div class="feature-icon">⌚</div>
+      <div class="feature-title">支持 Apple Watch</div>
+      <p class="feature-desc">仅用 Apple Watch 即可查看配方并执行 Brew Guide。与 iPhone 自动同步，两端操作均可即时生效。</p>
+    </div>
+    <div class="feature-card">
       <div class="feature-icon">⭐</div>
       <div class="feature-title">7 项品鉴评分</div>
       <p class="feature-desc">从酸度、甜度、苦度、醇厚度、干净度、余韵到平衡感，均以 10 分制记录，综合评分满分 100 分。</p>
@@ -310,6 +390,11 @@
       <div class="feature-icon">🔍</div>
       <div class="feature-title">配方对比</div>
       <p class="feature-desc">并排比较两个配方，差异高亮功能帮你找到下一杯的改进点。</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🤖</div>
+      <div class="feature-title">生成式AI文本复制</div>
+      <p class="feature-desc">将配方与评价复制为适合生成式AI的文本。粘贴到你喜欢的AI服务中，即可获得改善建议。</p>
     </div>
   </div>
 </section>
@@ -342,16 +427,25 @@
 </section>
 
 <!-- ICLOUD -->
-<section style="background: var(--cream);">
+<section style="background:
+    radial-gradient(ellipse 55% 50% at 12% 25%, #F0E4D4 0%, transparent 60%),
+    radial-gradient(ellipse 50% 45% at 88% 75%, #ECDCC8 0%, transparent 55%),
+    var(--cream);">
   <div class="icloud-section">
     <div class="icloud-text">
       <div class="section-label">iCloud Sync</div>
       <h2 class="section-title">无论身在何处,<br>配方始终相伴。</h2>
       <p style="color: var(--text-muted); line-height: 1.8;">
-        CffeaNote 使用 CloudKit 实现 iCloud 同步。配方会在 iPhone 与 iPad 之间自动同步，让你在任意设备上都能获取最新记录。你的数据将安全保存在你自己的 iCloud 中。
+        CoffeaNote 使用 CloudKit 实现 iCloud 同步。配方会在 iPhone 与 iPad 之间自动同步，让你在任意设备上都能获取最新记录。你的数据将安全保存在你自己的 iCloud 中。
       </p>
     </div>
-    <div class="icloud-visual">☁️</div>
+    <div class="icloud-visual">
+      <div class="icloud-ring icloud-ring-outer"></div>
+      <div class="icloud-ring icloud-ring-mid"></div>
+      <div class="icloud-cloud">☁️</div>
+      <div class="icloud-device icloud-device-left">📱<span>iPhone</span></div>
+      <div class="icloud-device icloud-device-right">📱<span>iPad</span></div>
+    </div>
   </div>
 </section>
 

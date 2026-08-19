@@ -3,13 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CffeaNote — Coffee Brewing Journal</title>
-  <meta name="description" content="CffeaNote is an iPhone / iPad app for logging and managing your specialty coffee hand-drip recipes.">
+  <title>CoffeaNote — Coffee Recipe & Brew Journal App (V60, Apple Watch)</title>
+  <meta name="description" content="Log your coffee dose, grind size, water temp, and pour timing to recreate your best hand-drip recipes. Works with V60 and switch drippers, plus a Brew Guide on Apple Watch. iCloud sync included.">
+  <link rel="canonical" href="https://nezuzuapps.github.io/CoffeaNote/index_en.html">
+  <link rel="alternate" hreflang="ja" href="https://nezuzuapps.github.io/CoffeaNote/index.html">
+  <link rel="alternate" hreflang="en" href="https://nezuzuapps.github.io/CoffeaNote/index_en.html">
+  <link rel="alternate" hreflang="ko" href="https://nezuzuapps.github.io/CoffeaNote/index_ko.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://nezuzuapps.github.io/CoffeaNote/index_zh-Hans.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://nezuzuapps.github.io/CoffeaNote/index_zh-Hant.html">
+  <link rel="alternate" hreflang="x-default" href="https://nezuzuapps.github.io/CoffeaNote/index.html">
+  <link rel="icon" type="image/png" href="img/favicon/favicon-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="img/favicon/favicon-16.png" sizes="16x16">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CoffeaNote">
+  <meta property="og:title" content="CoffeaNote — Coffee Recipe & Brew Journal App (V60, Apple Watch)">
+  <meta property="og:description" content="Log your coffee dose, grind size, water temp, and pour timing to recreate your best hand-drip recipes. Works with V60 and switch drippers, plus a Brew Guide on Apple Watch. iCloud sync included.">
+  <meta property="og:image" content="https://nezuzuapps.github.io/CoffeaNote/img/keyvisual.png">
+  <meta property="og:url" content="https://nezuzuapps.github.io/CoffeaNote/index_en.html">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CoffeaNote — Coffee Recipe & Brew Journal App (V60, Apple Watch)">
+  <meta name="twitter:description" content="Log your coffee dose, grind size, water temp, and pour timing to recreate your best hand-drip recipes. Works with V60 and switch drippers, plus a Brew Guide on Apple Watch. iCloud sync included.">
+  <meta name="twitter:image" content="https://nezuzuapps.github.io/CoffeaNote/img/keyvisual.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "CoffeaNote",
+    "operatingSystem": "iOS, iPadOS, watchOS",
+    "applicationCategory": "LifestyleApplication",
+    "description": "Log dose, grind size, water temperature, and pour timing to recreate your best hand-drip coffee recipes. Supports V60 and switch drippers, with a Brew Guide on Apple Watch.",
+    "url": "https://nezuzuapps.github.io/CoffeaNote/index_en.html",
+    "image": "https://nezuzuapps.github.io/CoffeaNote/img/keyvisual.png",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "nezuzuapps"
+    }
+  }
+  </script>
   <style>
     :root {
       --cream: #FAF6F0;
       --cream-dark: #F0E8DC;
       --brown-light: #C49A72;
+      --tan-light: #E4C9A8;
       --brown: #8B6244;
       --brown-dark: #5C3D22;
       --text: #2C1A0E;
@@ -77,7 +121,7 @@
     .hero-text { flex: 1 1 380px; max-width: 540px; }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 0.4rem;
-      background: var(--brown-light); color: var(--white);
+      background: var(--brown-dark); color: var(--white);
       font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em;
       padding: 0.3rem 0.9rem; border-radius: 999px;
       margin-bottom: 1.6rem; text-transform: uppercase;
@@ -132,7 +176,12 @@
     }
 
     /* ── FEATURES ── */
-    .section { padding: 6rem 6%; }
+    .section {
+      padding: 6rem 6%;
+      background:
+        radial-gradient(ellipse 45% 40% at 90% 10%, #F0E4D4 0%, transparent 55%),
+        radial-gradient(ellipse 40% 35% at 5% 90%, #F0E4D4 0%, transparent 50%);
+    }
     .section-label {
       font-size: 0.76rem; font-weight: 700; color: var(--brown-light);
       letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.6rem;
@@ -174,7 +223,7 @@
       padding: 5rem 6%;
       text-align: center;
     }
-    .dripper-section .section-label { color: var(--brown-light); }
+    .dripper-section .section-label { color: var(--tan-light); }
     .dripper-section .section-title { color: var(--white); }
     .dripper-section .section-sub { color: rgba(255,255,255,0.6); margin: 0 auto 2.5rem; }
     .dripper-chips { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; max-width: 700px; margin: 0 auto; }
@@ -193,13 +242,38 @@
     }
     .icloud-text { flex: 1 1 300px; }
     .icloud-visual {
+      position: relative;
       flex: 0 0 auto;
-      width: 200px; height: 200px;
+      width: 260px; height: 260px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .icloud-ring {
+      position: absolute; border-radius: 50%;
+      border: 1.5px dashed var(--brown-light);
+      opacity: 0.4;
+    }
+    .icloud-ring-outer { width: 260px; height: 260px; }
+    .icloud-ring-mid { width: 190px; height: 190px; opacity: 0.55; }
+    .icloud-cloud {
+      position: relative; z-index: 2;
+      width: 140px; height: 140px;
       background: var(--cream-dark); border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
-      font-size: 5rem;
+      font-size: 3.6rem;
       box-shadow: 0 20px 60px var(--shadow);
     }
+    .icloud-device {
+      position: absolute; z-index: 3;
+      display: flex; flex-direction: column; align-items: center; gap: 0.15rem;
+      background: var(--white);
+      border-radius: 14px;
+      padding: 0.5rem 0.8rem;
+      font-size: 1.3rem;
+      box-shadow: 0 10px 26px var(--shadow);
+    }
+    .icloud-device span { font-size: 0.6rem; font-weight: 700; color: var(--brown-dark); }
+    .icloud-device-left { top: 4%; left: -4%; }
+    .icloud-device-right { bottom: 4%; right: -4%; }
 
     /* ── FOOTER ── */
     footer {
@@ -229,7 +303,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="index_en.html" class="nav-logo">☕ CffeaNote</a>
+  <a href="index_en.html" class="nav-logo">☕ CoffeaNote</a>
   <div class="nav-links">
     <a href="privacy_en.html">Privacy Policy</a>
     <a href="contact.html">Contact</a>
@@ -246,10 +320,10 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <span class="hero-badge">📱 iPhone / iPad</span>
+    <span class="hero-badge">📱 iPhone / iPad / ⌚ Apple Watch</span>
     <h1>Capture every cup,<br>down to the <em>last drop</em>.</h1>
     <p class="hero-sub">
-      CffeaNote helps you carefully log and<br>
+      CoffeaNote helps you carefully log and<br>
       manage every step of your specialty coffee brews —<br>
       from extraction process to tasting score, all in one place.
     </p>
@@ -263,6 +337,7 @@
     <div class="hero-tags">
       <span class="hero-tag"><strong>7-point</strong> tasting score</span>
       <span class="hero-tag"><strong>☁️</strong> iCloud sync</span>
+      <span class="hero-tag"><strong>⌚</strong> Apple Watch support</span>
       <span class="hero-tag"><strong>20+</strong> drippers supported</span>
       <span class="hero-tag">Free to start</span>
     </div>
@@ -270,7 +345,7 @@
 
   <!-- KEY VISUAL -->
   <div class="hero-phones">
-    <img src="img/keyvisual.png" alt="CffeaNote app screens — Recipe list, Brew Guide, Tasting score">
+    <img src="img/keyvisual.png" alt="CoffeaNote app screens — Recipe list, Brew Guide, Tasting score">
   </div>
 </section>
 
@@ -297,6 +372,11 @@
       <p class="feature-desc">Step-by-step real-time guidance based on your recipe. See pour timing, water amount, and temperature as you brew.</p>
     </div>
     <div class="feature-card">
+      <div class="feature-icon">⌚</div>
+      <div class="feature-title">Apple Watch Support</div>
+      <p class="feature-desc">Check recipes and run Brew Guide right from your Apple Watch. It syncs automatically with iPhone, and controls work from either device.</p>
+    </div>
+    <div class="feature-card">
       <div class="feature-icon">⭐</div>
       <div class="feature-title">7-Point Tasting Score</div>
       <p class="feature-desc">Rate acidity, sweetness, bitterness, body, cleanliness, aftertaste, and balance out of 10 — for an overall score out of 100.</p>
@@ -310,6 +390,11 @@
       <div class="feature-icon">🔍</div>
       <div class="feature-title">Recipe Compare</div>
       <p class="feature-desc">View two recipes side by side with diff highlighting — find what to tweak for an even better next cup.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🤖</div>
+      <div class="feature-title">Copy for AI Review</div>
+      <p class="feature-desc">Copy your recipe and tasting notes as text formatted for AI assistants. Paste it into your favorite AI service to get improvement suggestions.</p>
     </div>
   </div>
 </section>
@@ -342,16 +427,25 @@
 </section>
 
 <!-- ICLOUD -->
-<section style="background: var(--cream);">
+<section style="background:
+    radial-gradient(ellipse 55% 50% at 12% 25%, #F0E4D4 0%, transparent 60%),
+    radial-gradient(ellipse 50% 45% at 88% 75%, #ECDCC8 0%, transparent 55%),
+    var(--cream);">
   <div class="icloud-section">
     <div class="icloud-text">
       <div class="section-label">iCloud Sync</div>
       <h2 class="section-title">Wherever you are,<br>your recipes follow.</h2>
       <p style="color: var(--text-muted); line-height: 1.8;">
-        CffeaNote uses CloudKit for iCloud sync. Your recipes auto-sync between iPhone and iPad, so the latest record is always available on every device. Your data stays safely in your own iCloud.
+        CoffeaNote uses CloudKit for iCloud sync. Your recipes auto-sync between iPhone and iPad, so the latest record is always available on every device. Your data stays safely in your own iCloud.
       </p>
     </div>
-    <div class="icloud-visual">☁️</div>
+    <div class="icloud-visual">
+      <div class="icloud-ring icloud-ring-outer"></div>
+      <div class="icloud-ring icloud-ring-mid"></div>
+      <div class="icloud-cloud">☁️</div>
+      <div class="icloud-device icloud-device-left">📱<span>iPhone</span></div>
+      <div class="icloud-device icloud-device-right">📱<span>iPad</span></div>
+    </div>
   </div>
 </section>
 
